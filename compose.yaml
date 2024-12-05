@@ -14,10 +14,8 @@ services:
 
 
   #Múltiplos containers, usando extends
-  web:
-    extends:
-      file: ./kube-news.compose.yaml
-      service:  kube_news 
+include:
+  - ./kube-news.compose.yaml
 
 volumes:
   postgre_docker_vol:
